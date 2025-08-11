@@ -26,7 +26,7 @@ domReady(function () {
                 }
                 window.focus(); // Fokus kembali ke tab scanner
                 isProcessing = false; // Reset flag setelah selesai
-            }, 2500);
+            }, 5000);
 
             // Tampilkan Snackbar
             setTimeout(() => showSnackbar("Scanned successfully!"), 3000); // Delay 1 detik sebelum snackbar muncul
@@ -68,3 +68,4 @@ function isValidURL(string) {
         return false;
     }
 }
+
