@@ -38,10 +38,12 @@ domReady(function () {
         console.log("Scanned result:", decodedText);
     }
 
-    let html5QrCode = new Html5QrcodeScanner("my-qr-reader", {
-        fps: 10,
-        qrbox: 250,
-    });
+   let html5QrCode = new Html5Qrcode("my-qr-reader");
+html5QrCode.start(
+    { facingMode: "user" },
+    { fps: 10, qrbox: 250 },
+    onScanSuccess
+);
     html5QrCode.render(onScanSuccess);
 });
 
@@ -68,4 +70,5 @@ function isValidURL(string) {
         return false;
     }
 }
+
 
